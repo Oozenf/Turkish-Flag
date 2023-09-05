@@ -1,0 +1,64 @@
+<!-- CENG492 Computer Graphics - Homework 1 - Samed Onur Özen - 181180756 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<script id="vertex-shader" type="x-shader/x-vertex">
+attribute vec4 vPosition;
+
+void
+main()
+{
+    gl_Position = vPosition;
+}
+</script>
+
+<!-- red color-->
+<script id="fragment-shader" type="x-shader/x-fragment">
+precision mediump float;
+
+void
+main()
+{
+    gl_FragColor = vec4( 0.9, 0.0, 0.0, 1.0 );
+}
+</script>
+
+<!-- for the five triangles and pentagon of the star -->
+<script id="vertex-shader2" type="x-shader/x-vertex">
+attribute vec2 vPosition;
+
+void
+main()
+{
+    gl_Position = vec4(vPosition, 0.0, 11.0);
+}
+</script>
+
+<!-- white color-->
+<script id="fragment-shader2" type="x-shader/x-fragment">
+precision mediump float;
+
+void
+main()
+{
+    gl_FragColor = vec4( 0.0, 0.0, 0.0, 0.0 );
+}
+</script>
+
+
+
+<script type="text/javascript" src="common/webgl-utils.js"></script>
+<script type="text/javascript" src="common/initShaders.js"></script>
+<script type="text/javascript" src="common/MV.js"></script>
+<script type="text/javascript" src="TurkishFlag.js"></script>
+</head>
+
+<body>
+<canvas id="gl-canvas" width="600" height="600">
+Oops ... your browser doesn't support the HTML5 canvas element
+</canvas>
+</body>
+</html>
